@@ -53,11 +53,11 @@
 </head>
     <body>
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12">
                     <table class="table">
                         <thead>
-                            <tr class="text-center">
+                            <tr class="text-center table-dark fs-2">
                                 <th scope="col">NAME</th>
                                 <th scope="col">DESCRIPTION</th>
                                 <th scope="col">PARKING</th>
@@ -67,7 +67,7 @@
                         </thead>
                         <tbody>
                             <?php foreach($hotels as $hotel) { ?>
-                                <tr class="text-center">
+                                <tr class="text-center fs-4 table-info">
                                     <th scope="row">
                                         <?php echo $hotel['name']; ?>
                                     </th>
