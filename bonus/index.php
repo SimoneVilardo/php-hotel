@@ -2,6 +2,39 @@
 
    include __DIR__.'/partials/array.php';
 
+   if(isset($_GET['park'])){
+
+        $parkHotel = [];
+
+        foreach($hotels as $hotel) {
+            if($hotel['parking'] == filter_var($_GET['park'], FILTER_VALIDATE_BOOLEAN)){
+                $parkHotel [] = $hotel;
+            }
+            else if($_GET['park'] == "tutti"){
+                $parkHotel = $hotels;
+            }
+        }
+
+        $hotels = $parkHotel;
+   };
+
+   if(isset($_GET['rated'])){
+
+        $voteHotel = [];
+
+        foreach($hotels as $hotel) {
+            if($hotel['vote'] == $_GET['rated']){
+                $voteHotel [] = $hotel;
+                
+            }
+            else if($_GET['rated'] == "tutti"){
+                $voteHotel = $hotels;
+            }
+        }
+
+        $hotels = $voteHotel;
+   };
+
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +48,28 @@
 </head>
     <body>
         <div class="container">
-            <div class="row mt-5">
+            <div class="row mt-4 mb-5">
                 <div class="col-12">
+                    <form action="index.php" method="GET">
+                        <h3>PARKING:</h3>
+                        <select class="form-select mt-4 mb-4" name="park" id="park">
+                            <option value="tutti" selected>PARKING</option>
+                            <option value="1">YES</option>
+                            <option value="2">NO</option>
+                        </select>
+                        <h3>VOTE:</h3>
+                        <select class="form-select mt-4 mb-4" name="rated" id="rated">
+                            <option value="tutti" selected>VOTE</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-info">INVIA</button>
+                    </form>
+                </div>
+                <div class="col-12 mt-5">
                     <table class="table">
                         <thead>
                             <tr class="text-center table-dark fs-2">
