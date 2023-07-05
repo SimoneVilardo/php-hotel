@@ -23,7 +23,7 @@
         $voteHotel = [];
 
         foreach($hotels as $hotel) {
-            if($hotel['vote'] == $_GET['rated']){
+            if($hotel['vote'] >= $_GET['rated']){
                 $voteHotel [] = $hotel;
                 
             }
