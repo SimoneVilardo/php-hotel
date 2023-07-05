@@ -90,13 +90,13 @@
                                         <?php echo $hotel['description']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $hotel['parking']; ?>
+                                        <?php echo $hotel['parking'] === true ? 'SI' : 'NO'; ?>
                                     </td>
                                     <td>
-                                        <?php echo $hotel['vote']; ?>
+                                        <?php echo $hotel['vote']; ?>/5
                                     </td>
                                     <td>
-                                        <?php echo $hotel['distance_to_center']; ?>
+                                        <?php echo $hotel['distance_to_center']; ?>km
                                     </td>
                                 </tr>
                             <?php } ?>
