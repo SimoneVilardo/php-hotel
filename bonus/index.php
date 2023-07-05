@@ -53,13 +53,13 @@
                     <form action="index.php" method="GET">
                         <h3>PARKING:</h3>
                         <select class="form-select mt-4 mb-4" name="park" id="park">
-                            <option value="tutti" selected>PARKING</option>
+                            <option value="tutti" selected>TUTTI</option>
                             <option value="1">YES</option>
                             <option value="2">NO</option>
                         </select>
                         <h3>VOTE:</h3>
                         <select class="form-select mt-4 mb-4" name="rated" id="rated">
-                            <option value="tutti" selected>VOTE</option>
+                            <option value="tutti" selected>TUTTI</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
