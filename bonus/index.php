@@ -1,6 +1,6 @@
 <?php
 
-   include __DIR__.'/partials/array.php';
+   include __DIR__.'/partials/vars.php';
 
    if(isset($_GET['park'])){
 
